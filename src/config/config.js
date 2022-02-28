@@ -10,5 +10,10 @@ module.exports = {
       APP_ID: process.env.FIREBASE_APP_ID || "firebaseappid",
       MEASUREMENT_ID: process.env.FIREBASE_MEASUREMENT_ID || "measurementid",
     },
+    ADMIN: {
+      SERVICE_ACCOUNT_JSON_FILE:
+        process.env.FIREBASE_ADMIN_SERVICE_ACCOUNT_JSON_FILE ||
+        "serviceaccount",
+    },
   },
 };

@@ -1,4 +1,5 @@
 const config = require("../config/config");
+const { initializeApp } = require("firebase/app");
 
 const firebaseConfig = {
   apiKey: config.FIREBASE.CONFIG.API_KEY,
@@ -8,4 +9,11 @@ const firebaseConfig = {
   messagingSenderId: config.FIREBASE.CONFIG.MESSAGING_SENDER_ID,
   appId: config.FIREBASE.CONFIG.APP_ID,
   measurementId: config.FIREBASE.CONFIG.MEASUREMENT_ID,
+};
+
+// Initialize Firebase
+const firebaseApp = initializeApp(firebaseConfig);
+
+module.exports = {
+  firebaseApp,
 };
